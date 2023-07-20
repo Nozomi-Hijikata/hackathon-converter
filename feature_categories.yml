@@ -1,0 +1,32 @@
+feature_category_2:
+    id: 2
+    namespace_id: 1
+    name: 勤務時間
+feature_category_3:
+    id: 3
+    namespace_id: 1
+    name: 免許
+feature_category_4:
+    id: 4
+    namespace_id: 1
+    name: こんな人も歓迎
+feature_category_5:
+    id: 5
+    namespace_id: 1
+    name: 福利厚生
+feature_category_6:
+    id: 6
+    namespace_id: 2
+    name: 福利厚生
+feature_category_7:
+    id: 7
+    namespace_id: 2
+    name: こんな人も歓迎
+feature_category_8:
+    id: 8
+    namespace_id: 3
+    name: こんな人も歓迎
+feature_category_9:
+    id: 9
+    namespace_id: 3
+    name: 会社・求人の魅力
