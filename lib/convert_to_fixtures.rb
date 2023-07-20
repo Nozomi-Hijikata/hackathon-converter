@@ -1,6 +1,7 @@
 require 'csv'
 require 'yaml'
 require_relative 'write_to_file'
+require 'active_support/all'
 
 def convert_to_fixtures(file_path)
   file_name = file_path[/(\w+).csv$/,1]

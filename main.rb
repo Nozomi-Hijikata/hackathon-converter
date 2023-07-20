@@ -1,6 +1,5 @@
 require 'csv'
 require 'yaml'
-require 'active_support/all'
 require './lib/convert_to_csv'
 require './lib/convert_to_fixtures'
 
