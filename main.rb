@@ -28,9 +28,17 @@ def convert_to_fixtures(file_path)
   fixtures = {}
 
   CSV.foreach(file_path, headers: true) do |row|
-    fixtures["#{fixtures_section_name}_#{row[0]}"] = row.to_hash
+    # p row.to_hash.map { |k,v| [k,v]}.to_h
+    fixtures["#{fixtures_section_name}_#{row[0]}"] = row.to_hash.map do |k,v|
+      if v.match(/\A\d*\Z/)
+        value  = v.to_i
+      else
+        value = v
+      end
+      [k,value]
+    end.to_h
   end
-  write_to_file(fixtures.to_yaml.sub(/---\n/, ''), "#{fixtures_section_name}.yml")
+  write_to_file(fixtures.to_yaml.sub(/---\n/, ''), "#{file_name}.yml")
 end
 
 def write_to_file(data, file_name)
